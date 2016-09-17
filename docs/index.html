@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Emoji Passcodes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600">
+    <style>
+* {
+    box-sizing: border-box;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+body {
+    font-family: 'Open Sans', Helvetica Neue, sans-serif;
+    font-size: 1.05em;
+    line-height: 1.05em;
+    color: #999999;
+    background: #f9f9f9;
+}
+.app-tray {
+    width: 90%;
+    height: 100%;
+    max-width: 45em;
+}
+.app-item--is-center {
+    display: flex;
+    justify-content: center;
+}
+.app-item--is-horizontal-center {
+    display: flex;
+    align-items: center;
+}
+.app-item--has-border {
+    border-top: 0.14em solid #f2f2f2;
+}
+.app-font {
+    font-weight: 400;
+    padding-bottom: 0.25em;
+    padding-top: 0.25em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+.app-font--emoji {
+    font-size: 1.5em;
+}
+.app-font--link {
+    color: #666666;
+    text-decoration: underline;
+}
+.app-font--link:hover {
+    color: #333333;
+}
+.app-header {
+    background: #ffffff;
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, .05), 0 2px 4px 0 rgba(0, 0, 0, .06);
+    text-align: center;
+    height: 4em;
+    width: 100%;
+}
+.app-header span {
+    color: #555555;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25em;
+    font-weight: 200;
+}
+.app-content {
+    width: 100%;
+    display: flex;
+}
+.app-content__box {
+    margin-top: 2em;
+    padding: 0.75em 0;
+    background: #ffffff;
+    border: 0.10em solid #f2f2f2;
+    border-radius: 2px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.app-content__button {
+    width: 100%;
+    max-width: 10.25em;
+    display: block;
+    margin: 2.5em auto;
+    padding: 0.5em 0.75em;
+    border-radius: 4px;
+    border: 1px solid rgba(218, 85, 47, 0.75);
+    background: rgba(255, 255, 255, 0.75);
+    color: rgba(218, 85, 47, 0.75);
+    font-family: 'Open Sans', Helvetica Neue, sans-serif;
+    font-size: 1.25em;
+    line-height: 1.25em;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.02);
+    cursor: move;
+}
+.app-content__button:hover {
+    box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.1375);
+}
+.app-footer {
+    height: 4em;
+    width: 100%;
+    display: flex;
+}
+.app-footer__notice {
+    color: #999999;
+    margin: 0.8em;
+    padding: 0.4em;
+    font-size: 0.8em;
+}
+    </style>
+</head>
+<body>
+    <header class="app-header app-item--is-center">
+        <div class="app-tray">
+            <span>Emoji Passcodes &#128064;</span>
+        </div>
+    </header>
+    <section class="app-content app-item--is-center">
+        <div class="app-tray">
+            <div class="app-content__box">
+                <span class="app-font">Add the bookmarklet below, to get started.</span>
+                <span class="app-font app-font--emoji">&#128071;</span>
+                <span class="app-font">Or <a class="app-font--link" href="https://github.com/makersphereHQ/emoji-passcodes">read more</a> about it...</span>
+            </div>
+            <!-- Add the JavaScript Bookmarklet here -->
+            <a class="app-content__button" href="javascript:(function()%7Bopen%28%27data%3Atext%2Fhtml%3Bcharset%3Dutf8%3Bbase64%2CPCFET0NUWVBFIGh0bWw%2BCjxoZWFkPgo8bWV0YSBjaGFyc2V0PSJVVEYtOCI%2BCjx0aXRsZT5FbW9qaSBQYXNzY29kZXM8L3RpdGxlPgo8bGluayByZWw9InN0eWxlc2hlZXQiIGhyZWY9Imh0dHBzOi8vY2RuanMuY2xvdWRmbGFyZS5jb20vYWpheC9saWJzL25vcm1hbGl6ZS80LjIuMC9ub3JtYWxpemUubWluLmNzcyI%2BCjxsaW5rIHJlbD0ic3R5bGVzaGVldCIgaHJlZj0iaHR0cHM6Ly9mb250cy5nb29nbGVhcGlzLmNvbS9jc3M%2FZmFtaWx5PU9wZW4rU2Fuczo0MDAsNDAwaSw2MDAiPgo8c3R5bGU%2BCip7Ym94LXNpemluZzogYm9yZGVyLWJveDt9CmJvZHl7Zm9udC1mYW1pbHk6J09wZW4gU2FucycsIEhlbHZldGljYSBOZXVlLCBzYW5zLXNlcmlmO2ZvbnQtc2l6ZToxLjA1ZW07bGluZS1oZWlnaHQ6MS4wNWVtO2NvbG9yOiM5OTk5OTk7YmFja2dyb3VuZDojZjlmOWY5O30KLmFwcC10cmF5e3dpZHRoOjkwJTtoZWlnaHQ6MTAwJTttYXgtd2lkdGg6NDVlbTt9Ci5hcHAtaXRlbS0taXMtY2VudGVye2Rpc3BsYXk6ZmxleDtqdXN0aWZ5LWNvbnRlbnQ6Y2VudGVyO30KLmFwcC1pdGVtLS1pcy1mdWxsLWNlbnRlcntkaXNwbGF5OmZsZXg7anVzdGlmeS1jb250ZW50OmNlbnRlcjthbGlnbi1pdGVtczpjZW50ZXI7fQouYXBwLWl0ZW0tLWlzLWhvcml6b250YWwtY2VudGVye2Rpc3BsYXk6ZmxleDthbGlnbi1pdGVtczpjZW50ZXI7fQouYXBwLWl0ZW0tLWlzLWZ1bGwtd2lkdGh7d2lkdGg6MTAwJTtkaXNwbGF5OmJsb2NrO30KLmFwcC1pdGVtLS1oYXMtYm9yZGVye2JvcmRlci10b3A6MC4xNGVtIHNvbGlkICNmMmYyZjI7fQouYXBwLWZvbnR7Zm9udC13ZWlnaHQ6IDQwMDtwYWRkaW5nLWJvdHRvbTogMC4yNWVtO3BhZGRpbmctdG9wOiAwLjI1ZW07cGFkZGluZy1sZWZ0OiAwLjVlbTtwYWRkaW5nLXJpZ2h0OiAwLjVlbTt9Ci5hcHAtZm9udC0tZW1vaml7Zm9udC1zaXplOiAxLjVlbTt9Ci5hcHAtZm9udC0tYm9sZHtjb2xvcjogIzY2NjY2Njt9Ci5hcHAtaGVhZGVye2JhY2tncm91bmQ6I2ZmZmZmZjtib3gtc2hhZG93OjAgMXB4IDAgMCByZ2JhKDAsIDAsIDAsIC4wNSksIDAgMnB4IDRweCAwIHJnYmEoMCwgMCwgMCwgLjA2KTt0ZXh0LWFsaWduOmNlbnRlcjtoZWlnaHQ6NGVtO3dpZHRoOjEwMCU7fQouYXBwLWhlYWRlciBzcGFue2NvbG9yOiM1NTU1NTU7aGVpZ2h0OjEwMCU7d2lkdGg6MTAwJTtkaXNwbGF5OmZsZXg7bWFyZ2luOjA7anVzdGlmeS1jb250ZW50OmNlbnRlcjthbGlnbi1pdGVtczpjZW50ZXI7Zm9udC1zaXplOjEuMjVlbTtmb250LXdlaWdodDoyMDA7fQouYXBwLWNvbnRlbnR7d2lkdGg6MTAwJTtkaXNwbGF5OmZsZXg7fQouYXBwLWNvbnRlbnRfX2JveHttYXJnaW4tdG9wOjJlbTtwYWRkaW5nOjAuNzVlbSAwO2JhY2tncm91bmQ6I2ZmZmZmZjtib3JkZXI6MC4xMGVtIHNvbGlkICNmMmYyZjI7Ym9yZGVyLXJhZGl1czoycHg7d2lkdGg6MTAwJTtkaXNwbGF5OmZsZXg7YWxpZ24taXRlbXM6Y2VudGVyO2p1c3RpZnktY29udGVudDpjZW50ZXI7fQouYXBwLWNvbnRlbnRfX21haW57d2lkdGg6MTAwJTtkaXNwbGF5OmJsb2NrO30KLmFwcC1jb250ZW50X19tYWluLWlucHV0e2ZvbnQtc2l6ZTo0ZW07b3V0bGluZTpub25lO2JvcmRlci1yYWRpdXM6MnB4Oy13ZWJraXQtYXBwZWFyYW5jZTpub25lO21hcmdpbjo1JTtwYWRkaW5nOjElO3RleHQtYWxpZ246Y2VudGVyO2JvcmRlcjowLjAzZW0gc29saWQgI2YyZjJmMjt0cmFuc2l0aW9uOmJvcmRlciAwLjNzIGVhc2UtaW4tb3V0O2Rpc3BsYXk6YmxvY2s7d2lkdGg6MTAwJTt9Ci5hcHAtY29udGVudF9fbWFpbi1pbnB1dDpob3Zlcntib3JkZXItY29sb3I6I2UwZTBlMDt9Ci5hcHAtY29udGVudF9fbWFpbi1pbnB1dDpmb2N1c3tib3JkZXItY29sb3I6I2Q2ZDZkNjt9Ci5hcHAtY29udGVudF9fbWFpbi1pbnB1dDo6LXdlYmtpdC1pbnB1dC1wbGFjZWhvbGRlcntwYWRkaW5nLXRvcDowLjQ1ZW07fQouYXBwLWNvbnRlbnRfX21haW4taW5wdXQ6Oi1tb3otaW5wdXQtcGxhY2Vob2xkZXJ7cGFkZGluZy10b3A6MC40NWVtO30KLmFwcC1jb250ZW50X19tYWluLWlucHV0LmFwcC1jb250ZW50X19tYWluLWlucHV0LWlzLS1lcnJvcntib3JkZXItY29sb3I6cmdiYSgyMTgsIDg1LCA0NywgMC42KTt9Ci5hcHAtY29udGVudF9fbWFpbi1pbnB1dC5hcHAtY29udGVudF9fbWFpbi1pbnB1dC1pcy0tb2t7Ym9yZGVyLWNvbG9yOnJnYmEoNzcsIDE5OCwgMTAzLCAwLjYpO30KLmFwcC1vdXRwdXR7d2lkdGg6MTAwJTtkaXNwbGF5OmZsZXg7fQouYXBwLW91dHB1dF9fZmllbGR7ZGlzcGxheTpibG9jazt3aWR0aDoxMDAlO21hcmdpbjo1JTtwYWRkaW5nOjElO2NvbG9yOiNmZmZmZmY7b3V0bGluZTpub25lO2JvcmRlci1yYWRpdXM6MnB4Oy13ZWJraXQtYXBwZWFyYW5jZTpub25lO3RleHQtYWxpZ246Y2VudGVyO2JvcmRlcjowLjFlbSBzb2xpZCAjZTZlNmU2O29wYWNpdHk6MTt0cmFuc2l0aW9uOm9wYWNpdHkgMC4zcyBlYXNlLWluLW91dDt0cmFuc2l0aW9uOmJvcmRlciAwLjNzIGVhc2UtaW4tb3V0O30KLmFwcC1vdXRwdXRfX2ZpZWxkLS1pcy1pbmFjdGl2ZXtjb2xvcjojOTk5OTk5O30KLmFwcC1vdXRwdXRfX2ZpZWxkOjpzZWxlY3Rpb257Y29sb3I6cmdiYSg3NywgMTk4LCAxMDMsIDEpO2JhY2tncm91bmQ6cmdiYSg3NywgMTk4LCAxMDMsIDEpO30KLmFwcC1vdXRwdXRfX2ZpZWxkLWlzLS1oaWRkZW57b3BhY2l0eTowO30KLmFwcC1mb290ZXJ7aGVpZ2h0OjRlbTt3aWR0aDoxMDAlO2Rpc3BsYXk6ZmxleDt9Ci5hcHAtZm9vdGVyX19ub3RpY2V7Y29sb3I6Izk5OTk5OTttYXJnaW46MC44ZW07cGFkZGluZzowLjRlbTtmb250LXNpemU6MC44ZW07fQo8L3N0eWxlPgo8L2hlYWQ%2BCjxib2R5Pgo8aGVhZGVyIGNsYXNzPSJhcHAtaGVhZGVyIGFwcC1pdGVtLS1pcy1jZW50ZXIiPgo8ZGl2IGNsYXNzPSJhcHAtdHJheSI%2BPHNwYW4%2BRW1vamkgUGFzc2NvZGVzICYjMTI4MDY0Ozwvc3Bhbj48L2Rpdj4KPC9oZWFkZXI%2BCjxzZWN0aW9uIGNsYXNzPSJhcHAtY29udGVudCBhcHAtaXRlbS0taXMtY2VudGVyIj4KPGRpdiBjbGFzcz0iYXBwLXRyYXkiPjxkaXYgY2xhc3M9ImFwcC1jb250ZW50X19ib3giPgo8c3BhbiBjbGFzcz0iYXBwLWZvbnQgYXBwLWZvbnQtLWVtb2ppIj4mIzEyODA3NTs8L3NwYW4%2BCjxzcGFuIGNsYXNzPSJhcHAtZm9udCBhcHAtZm9udC0tYm9sZCI%2BSGVsbG8gZnJpZW5kITwvc3Bhbj4KPHNwYW4gY2xhc3M9ImFwcC1mb250Ij5HZXQgYSBuZXcgZmFuY3kgJmFtcDsgZWFzeSB0byByZW1lbWJlciBwYXNzY29kZS48L3NwYW4%2BPC9kaXY%2BCjxkaXYgY2xhc3M9ImFwcC1jb250ZW50X19tYWluIj4KPGZvcm0gY2xhc3M9ImFwcC1pdGVtLS1pcy1mdWxsLWNlbnRlciIgb25zdWJtaXQ9ImdlbmVyYXRlKHRoaXMpO2V2ZW50LnByZXZlbnREZWZhdWx0KCk7Ij4KPGlucHV0IGlkPSJhcHAtaW5wdXQtLWEiIGNsYXNzPSJhcHAtY29udGVudF9fbWFpbi1pbnB1dCIgb25mb2N1cz0ibG9nKHRoaXMpOyIgb25pbnB1dD0iY2hhbmdlKHRoaXMpOyIgdHlwZT0idGV4dCIgcGxhY2Vob2xkZXI9IiYjMTI4MTY5OyI%2BCjxpbnB1dCBpZD0iYXBwLWlucHV0LS1iIiBjbGFzcz0iYXBwLWNvbnRlbnRfX21haW4taW5wdXQiIG9uZm9jdXM9ImxvZyh0aGlzKTsiIG9uaW5wdXQ9ImNoYW5nZSh0aGlzKTsiIHR5cGU9InRleHQiIHBsYWNlaG9sZGVyPSImIzEyODE2OTsiPgo8aW5wdXQgaWQ9ImFwcC1pbnB1dC0tYyIgY2xhc3M9ImFwcC1jb250ZW50X19tYWluLWlucHV0IiBvbmZvY3VzPSJsb2codGhpcyk7IiBvbmlucHV0PSJjaGFuZ2UodGhpcyk7IiB0eXBlPSJ0ZXh0IiBwbGFjZWhvbGRlcj0iJiMxMjgxNjk7Ij4KPGlucHV0IGlkPSJhcHAtaW5wdXQtLWQiIGNsYXNzPSJhcHAtY29udGVudF9fbWFpbi1pbnB1dCIgb25mb2N1cz0ibG9nKHRoaXMpOyIgb25pbnB1dD0iY2hhbmdlKHRoaXMpOyIgdHlwZT0idGV4dCIgcGxhY2Vob2xkZXI9IiYjMTI4MTY5OyI%2BCjxpbnB1dCBzdHlsZT0icG9zaXRpb246YWJzb2x1dGU7bGVmdDotNTAwMDBweDtvcGFjaXR5OjA7IiB0eXBlPSJzdWJtaXQiIHZhbHVlPSJTdWJtaXQiPgo8L2Zvcm0%2BPC9kaXY%2BPC9kaXY%2BCjwvc2VjdGlvbj4KPHNlY3Rpb24gY2xhc3M9ImFwcC1vdXRwdXQgYXBwLWl0ZW0tLWlzLWNlbnRlciI%2BCjxkaXYgY2xhc3M9ImFwcC10cmF5IGFwcC1pdGVtLS1pcy1mdWxsLWNlbnRlciI%2BCjxpbnB1dCBpZD0iYXBwLW91dHB1dCIgY2xhc3M9ImFwcC1vdXRwdXRfX2ZpZWxkIGFwcC1vdXRwdXRfX2ZpZWxkLWlzLS1oaWRkZW4gYXBwLW91dHB1dF9fZmllbGQtLWlzLWluYWN0aXZlIiBvbmJsdXI9ImRvbmUodGhpcyk7IiBvbmZvY3VzPSJzaG93KHRoaXMpOyIgdHlwZT0idGV4dCIgdmFsdWU9IiYjMTI4Mzc0OyBEb3VibGUgY2xpY2sgJmFtcDsgY29weSBtZSEiIHJlYWRvbmx5Pgo8aW5wdXQgaWQ9ImFwcC1vdXRwdXRfX3N0b3JhZ2UiIGNsYXNzPSJhcHAtb3V0cHV0X19maWVsZCIgdHlwZT0iaGlkZGVuIiB2YWx1ZT0iIj4KPC9kaXY%2BCjwvc2VjdGlvbj4KPGZvb3RlciBjbGFzcz0iYXBwLWZvb3RlciBhcHAtaXRlbS0taXMtY2VudGVyIj4KPGRpdiBjbGFzcz0iYXBwLXRyYXkgYXBwLWl0ZW0tLWlzLWhvcml6b250YWwtY2VudGVyIGFwcC1pdGVtLS1oYXMtYm9yZGVyIj4KPGRpdiBzdHlsZT0ianVzdGlmeS1zZWxmOmZsZXgtc3RhcnQ7d2lkdGg6MTAwJTt0ZXh0LWFsaWduOmNlbnRlcjsiPgo8c3BhbiBjbGFzcz0iYXBwLWZvb3Rlcl9fbm90aWNlIj5NYWRlIHdpdGggPHNwYW4gc3R5bGU9ImZvbnQtZmFtaWx5OnNhbnMtc2VyaWY7Y29sb3I6cmdiYSgyMTgsIDg1LCA0NywgMC42KTsiPiYjOTgyOTs8L3NwYW4%2BIGluIFp1cmljaC48L3NwYW4%2BPC9kaXY%2BPGRpdiBzdHlsZT0ianVzdGlmeS1zZWxmOmZsZXgtZW5kO3dpZHRoOjEwMCU7dGV4dC1hbGlnbjpyaWdodDsiPjxzcGFuIGNsYXNzPSJhcHAtZm9vdGVyX19ub3RpY2UiPkEgTWFrZXJzcGhlcmUgTGFicyA8c3VwIHN0eWxlPSJjb2xvcjojNzc3Nzc3OyI%2BVGhpbmc8L3N1cD48L3NwYW4%2BCjwvZGl2PjwvZGl2Pgo8L2Zvb3Rlcj4KPHNjcmlwdCBzcmM9Imh0dHBzOi8vY2RuanMuY2xvdWRmbGFyZS5jb20vYWpheC9saWJzL2pzU0hBLzIuMi4wL3NoYS5qcyIgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij48L3NjcmlwdD4KPHNjcmlwdD4KdmFyIHN0cmVuZ3RoID0gMzI7CnZhciBjaGVja3N1bSA9IDA7CnZhciBjdXJyZW50Owp2YXIgYWN0aXZlID0gZmFsc2U7CnZhciBpbnB1dEEgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnYXBwLWlucHV0LS1hJyk7CnZhciBpbnB1dEIgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnYXBwLWlucHV0LS1iJyk7CnZhciBpbnB1dEMgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnYXBwLWlucHV0LS1jJyk7CnZhciBpbnB1dEQgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnYXBwLWlucHV0LS1kJyk7CnZhciBvdXRwdXQgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnYXBwLW91dHB1dCcpOwp2YXIgc3RvcmFnZSA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdhcHAtb3V0cHV0X19zdG9yYWdlJyk7CmZ1bmN0aW9uIGxvZyhlKXt3aW5kb3cuY3VycmVudCA9IGU7fQpmdW5jdGlvbiB2YWxpZGF0ZShpKXsKY29uc29sZS5sb2coaS5sZW5ndGgpOwppZiAoaS5sZW5ndGggPiAyKSB7CmNvbnNvbGUubG9nKGkubGVuZ3RoKTsKcmV0dXJuIGZhbHNlOwp9IGVsc2Ugewp2YXIgcmVnZXggPSBSZWdFeHAoJ1tcdTIzMUEtXHVEODNFXHVEREMwXScsICdnJyk7CnJldHVybiByZWdleC50ZXN0KGkpOwp9fQpmdW5jdGlvbiBjaGFuZ2UoZSl7CnZhciBpbnB1dCA9IGUudmFsdWU7CnZhciB2YWxpZGF0aW9uID0gdmFsaWRhdGUoaW5wdXQpOwpjb25zb2xlLmxvZyhpbnB1dCk7IGNvbnNvbGUubG9nKHZhbGlkYXRpb24pOwppZiAodmFsaWRhdGlvbiA9PT0gZmFsc2UpIHsKZS52YWx1ZSA9ICcnOwplLmNsYXNzTmFtZSA9ICdhcHAtY29udGVudF9fbWFpbi1pbnB1dCBhcHAtY29udGVudF9fbWFpbi1pbnB1dC1pcy0tZXJyb3InOwpjb25zb2xlLmxvZygnT3doLCBub3QgYW4gRW1vamkuLi4nKTsKfSBpZiAodmFsaWRhdGlvbiA9PT0gdHJ1ZSkgewp3aW5kb3cuY2hlY2tzdW0rKzsKZS5jbGFzc05hbWUgPSAnYXBwLWNvbnRlbnRfX21haW4taW5wdXQgYXBwLWNvbnRlbnRfX21haW4taW5wdXQtaXMtLW9rJzsKY29uc29sZS5sb2coY2hlY2tzdW0pOwp9fQpmdW5jdGlvbiBnZW5lcmF0ZShlKXsKaWYgKHdpbmRvdy5jaGVja3N1bSA%2BPSA0KSB7CmNvbnNvbGUubG9nKCdHZW5lcmF0aW5nIHBhc3Njb2RlLi4uJyk7CnZhciBzdHJpbmcgPSB3aW5kb3cuaW5wdXRBLnZhbHVlICsgd2luZG93LmlucHV0Qi52YWx1ZSArIHdpbmRvdy5pbnB1dEMudmFsdWUgKyB3aW5kb3cuaW5wdXRELnZhbHVlOwp2YXIgc2hhRiA9IG5ldyBqc1NIQSgnU0hBLTUxMicsICdURVhUJyk7CnZhciBzaGFUID0gbmV3IGpzU0hBKCdTSEEtMjU2JywgJ1RFWFQnKTsKdmFyIHVwZGF0ZUYgPSBzaGFGLnVwZGF0ZShzdHJpbmcpOwp2YXIgaGFzaEYgPSBzaGFGLmdldEhhc2goJ0hFWCcpOwp2YXIgdXBkYXRlVCA9IHNoYVQudXBkYXRlKGhhc2hGKTsKdmFyIGhhc2hUID0gc2hhVC5nZXRIYXNoKCdIRVgnKTsKdmFyIGhhc2hCID0gYnRvYShoYXNoVCk7CnZhciBjb2RlID0gaGFzaEIuc3Vic3RyaW5nKDAsIHN0cmVuZ3RoKTsKY29uc29sZS5sb2coY29kZSk7CndpbmRvdy5zdG9yYWdlLnZhbHVlID0gY29kZTsKd2luZG93LmlucHV0QS52YWx1ZSA9ICcnOyB3aW5kb3cuaW5wdXRCLnZhbHVlID0gJyc7IHdpbmRvdy5pbnB1dEMudmFsdWUgPSAnJzsgd2luZG93LmlucHV0RC52YWx1ZSA9ICcnOwp3aW5kb3cuY3VycmVudC5ibHVyKCk7CndpbmRvdy5vdXRwdXQuY2xhc3NOYW1lID0gJ2FwcC1vdXRwdXRfX2ZpZWxkIGFwcC1vdXRwdXRfX2ZpZWxkLS1pcy1pbmFjdGl2ZSc7CndpbmRvdy5hY3RpdmUgPSB0cnVlOwp9IGlmICh3aW5kb3cuY2hlY2tzdW0gIT0gNCkgewpjb25zb2xlLmxvZygnTm9wZS4uLicpOwp9fQpmdW5jdGlvbiBzaG93KGUpewppZiAod2luZG93LmFjdGl2ZSA9PT0gdHJ1ZSkgewplLnZhbHVlID0gd2luZG93LnN0b3JhZ2UudmFsdWU7CmUuY2xhc3NOYW1lID0gJ2FwcC1vdXRwdXRfX2ZpZWxkJzsKfX0KZnVuY3Rpb24gZG9uZShlKXsKaWYgKHdpbmRvdy5hY3RpdmUgPT09IHRydWUpIHsKY29uc29sZS5sb2cod2luZG93LnN0b3JhZ2UudmFsdWUpOwplLnZhbHVlID0gJ1x1RDgzRFx1REU0QyBBbHJpZ2h0LCB5b3VyIHBhc3Njb2RlIGlzIGNvcGllZCEnOwplLmNsYXNzTmFtZSA9ICdhcHAtb3V0cHV0X19maWVsZCBhcHAtb3V0cHV0X19maWVsZC0taXMtaW5hY3RpdmUnOwp9fQo8L3NjcmlwdD4KPC9ib2R5Pgo8L2h0bWw%2B%27%2C%20%27emoji-passcode%27%2C%20%27height%3D580%2Cwidth%3D770%2Cresizable%3Dno%2Cscrollbars%3Dno%2Ctitlebar%3Dno%2Clocation%3Dno%27%29%7D)()">&#43; Emoji Passcodes</a>
+        </div>
+    </section>
+    <footer class="app-footer app-item--is-center">
+        <div class="app-tray app-item--is-horizontal-center app-item--has-border">
+            <div style="justify-self:flex-start;width:100%;text-align:center;">
+                <span class="app-footer__notice">Made with <span style="font-family:sans-serif;color:rgba(218, 85, 47, 0.6);">&#9829;</span> in Zurich.</span>
+            </div>
+            <div style="justify-self:flex-end;width:100%;text-align:right;">
+                <span class="app-footer__notice">A Makersphere Labs <sup style="color:#777777;">Thing</sup></span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

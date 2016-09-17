@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Emoji Passcodes</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600">
+<style>
+*{box-sizing: border-box;}
+body{font-family:'Open Sans', Helvetica Neue, sans-serif;font-size:1.05em;line-height:1.05em;color:#999999;background:#f9f9f9;}
+.app-tray{width:90%;height:100%;max-width:45em;}
+.app-item--is-center{display:flex;justify-content:center;}
+.app-item--is-full-center{display:flex;justify-content:center;align-items:center;}
+.app-item--is-horizontal-center{display:flex;align-items:center;}
+.app-item--is-full-width{width:100%;display:block;}
+.app-item--has-border{border-top:0.14em solid #f2f2f2;}
+.app-font{font-weight: 400;padding-bottom: 0.25em;padding-top: 0.25em;padding-left: 0.5em;padding-right: 0.5em;}
+.app-font--emoji{font-size: 1.5em;}
+.app-font--bold{color: #666666;}
+.app-header{background:#ffffff;box-shadow:0 1px 0 0 rgba(0, 0, 0, .05), 0 2px 4px 0 rgba(0, 0, 0, .06);text-align:center;height:4em;width:100%;}
+.app-header span{color:#555555;height:100%;width:100%;display:flex;margin:0;justify-content:center;align-items:center;font-size:1.25em;font-weight:200;}
+.app-content{width:100%;display:flex;}
+.app-content__box{margin-top:2em;padding:0.75em 0;background:#ffffff;border:0.10em solid #f2f2f2;border-radius:2px;width:100%;display:flex;align-items:center;justify-content:center;}
+.app-content__main{width:100%;display:block;}
+.app-content__main-input{font-size:4em;outline:none;border-radius:2px;-webkit-appearance:none;margin:5%;padding:1%;text-align:center;border:0.03em solid #f2f2f2;transition:border 0.3s ease-in-out;display:block;width:100%;}
+.app-content__main-input:hover{border-color:#e0e0e0;}
+.app-content__main-input:focus{border-color:#d6d6d6;}
+.app-content__main-input::-webkit-input-placeholder{padding-top:0.45em;}
+.app-content__main-input::-moz-input-placeholder{padding-top:0.45em;}
+.app-content__main-input.app-content__main-input-is--error{border-color:rgba(218, 85, 47, 0.6);}
+.app-content__main-input.app-content__main-input-is--ok{border-color:rgba(77, 198, 103, 0.6);}
+.app-output{width:100%;display:flex;}
+.app-output__field{display:block;width:100%;margin:5%;padding:1%;color:#ffffff;outline:none;border-radius:2px;-webkit-appearance:none;text-align:center;border:0.1em solid #e6e6e6;opacity:1;transition:opacity 0.3s ease-in-out;transition:border 0.3s ease-in-out;}
+.app-output__field--is-inactive{color:#999999;}
+.app-output__field::selection{color:rgba(77, 198, 103, 1);background:rgba(77, 198, 103, 1);}
+.app-output__field-is--hidden{opacity:0;}
+.app-footer{height:4em;width:100%;display:flex;}
+.app-footer__notice{color:#999999;margin:0.8em;padding:0.4em;font-size:0.8em;}
+</style>
+</head>
+<body>
+<header class="app-header app-item--is-center">
+<div class="app-tray"><span>Emoji Passcodes &#128064;</span></div>
+</header>
+<section class="app-content app-item--is-center">
+<div class="app-tray"><div class="app-content__box">
+<span class="app-font app-font--emoji">&#128075;</span>
+<span class="app-font app-font--bold">Hello friend!</span>
+<span class="app-font">Get a new fancy &amp; easy to remember passcode.</span></div>
+<div class="app-content__main">
+<form class="app-item--is-full-center" onsubmit="generate(this);event.preventDefault();">
+<input id="app-input--a" class="app-content__main-input" onfocus="log(this);" oninput="change(this);" type="text" placeholder="&#128169;">
+<input id="app-input--b" class="app-content__main-input" onfocus="log(this);" oninput="change(this);" type="text" placeholder="&#128169;">
+<input id="app-input--c" class="app-content__main-input" onfocus="log(this);" oninput="change(this);" type="text" placeholder="&#128169;">
+<input id="app-input--d" class="app-content__main-input" onfocus="log(this);" oninput="change(this);" type="text" placeholder="&#128169;">
+<input style="position:absolute;left:-50000px;opacity:0;" type="submit" value="Submit">
+</form></div></div>
+</section>
+<section class="app-output app-item--is-center">
+<div class="app-tray app-item--is-full-center">
+<input id="app-output" class="app-output__field app-output__field-is--hidden app-output__field--is-inactive" onblur="done(this);" onfocus="show(this);" type="text" value="&#128374; Double click &amp; copy me!" readonly>
+<input id="app-output__storage" class="app-output__field" type="hidden" value="">
+</div>
+</section>
+<footer class="app-footer app-item--is-center">
+<div class="app-tray app-item--is-horizontal-center app-item--has-border">
+<div style="justify-self:flex-start;width:100%;text-align:center;">
+<span class="app-footer__notice">Made with <span style="font-family:sans-serif;color:rgba(218, 85, 47, 0.6);">&#9829;</span> in Zurich.</span></div><div style="justify-self:flex-end;width:100%;text-align:right;"><span class="app-footer__notice">A Makersphere Labs <sup style="color:#777777;">Thing</sup></span>
+</div></div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/2.2.0/sha.js" type="text/javascript"></script>
+<script>
+var strength = 32;
+var checksum = 0;
+var current;
+var active = false;
+var inputA = document.getElementById('app-input--a');
+var inputB = document.getElementById('app-input--b');
+var inputC = document.getElementById('app-input--c');
+var inputD = document.getElementById('app-input--d');
+var output = document.getElementById('app-output');
+var storage = document.getElementById('app-output__storage');
+function log(e){window.current = e;}
+function validate(i){
+console.log(i.length);
+if (i.length > 2) {
+console.log(i.length);
+return false;
+} else {
+var regex = RegExp('[\u231A-\uD83E\uDDC0]', 'g');
+return regex.test(i);
+}}
+function change(e){
+var input = e.value;
+var validation = validate(input);
+console.log(input); console.log(validation);
+if (validation === false) {
+e.value = '';
+e.className = 'app-content__main-input app-content__main-input-is--error';
+console.log('Owh, not an Emoji...');
+} if (validation === true) {
+window.checksum++;
+e.className = 'app-content__main-input app-content__main-input-is--ok';
+console.log(checksum);
+}}
+function generate(e){
+if (window.checksum >= 4) {
+console.log('Generating passcode...');
+var string = window.inputA.value + window.inputB.value + window.inputC.value + window.inputD.value;
+var shaF = new jsSHA('SHA-512', 'TEXT');
+var shaT = new jsSHA('SHA-256', 'TEXT');
+var updateF = shaF.update(string);
+var hashF = shaF.getHash('HEX');
+var updateT = shaT.update(hashF);
+var hashT = shaT.getHash('HEX');
+var hashB = btoa(hashT);
+var code = hashB.substring(0, strength);
+console.log(code);
+window.storage.value = code;
+window.inputA.value = ''; window.inputB.value = ''; window.inputC.value = ''; window.inputD.value = '';
+window.current.blur();
+window.output.className = 'app-output__field app-output__field--is-inactive';
+window.active = true;
+} if (window.checksum != 4) {
+console.log('Nope...');
+}}
+function show(e){
+if (window.active === true) {
+e.value = window.storage.value;
+e.className = 'app-output__field';
+}}
+function done(e){
+if (window.active === true) {
+console.log(window.storage.value);
+e.value = '\uD83D\uDE4C Alright, your passcode is copied!';
+e.className = 'app-output__field app-output__field--is-inactive';
+}}
+</script>
+</body>
+</html>
