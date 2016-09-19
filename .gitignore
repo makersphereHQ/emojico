@@ -1,2 +1,4 @@
 .DS_Store
-*.min.js
+bookmarklet.js
+bookmarklet.html
+*.tmp
