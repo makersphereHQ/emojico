@@ -3,6 +3,7 @@
 #
 # Tested with macOS 10.11.6
 # Version @1.1.0
+# Developer release
 #
 #
 

@@ -4,12 +4,15 @@ Use emojis instead of weak passwords!
 Learn more about this project and how it works below.
 
 Please note: This is a **beta release**. Debug mode is enabled.
+We'll update the algorithm in the near future, so _don't use_ this version `1.1.0` in production.
+The upcoming version `2.0.0` will break backwards compatibility.
+Play with the application, and use the JavaScript console for debugging.
 
 Feel free to open a Pull Request and help us, to make the internet a bit more secure.
 
 Also check out https://makersphere.org & follow us on https://twitter.com/makerspherehq ✌️
 
-## Why it this a thing?
+## Why is this a thing?
 * Passwords are often weak and easy to guess
 * People are lazy
 * Everyone loves emojis
