@@ -87,8 +87,8 @@ body {
 	font-size: 4em;
 	outline: none;
 	border-radius: 2px;
-	margin: 5%;
-	padding: 1%;
+	margin: 7px;
+	padding: 1px;
 	text-align: center;
 	border: 0.03em solid #f2f2f2;
 	transition: border 0.3s ease-in-out;
