@@ -34,14 +34,14 @@ input {
 	display: block;
 }
 .app-item--has-border {
-	border-top: 0.14em solid #f2f2f2;
+	border-top: 1px solid #f2f2f2;
 }
 .app-font {
-	font-weight: 400;
 	padding-bottom: 0.25em;
 	padding-top: 0.25em;
 	padding-left: 0.5em;
 	padding-right: 0.5em;
+	font-weight: 400;
 }
 .app-font--emoji {
 	font-size: 1.5em;
@@ -50,53 +50,59 @@ input {
 	color: #666666;
 }
 .app-header {
+	height: 4em;
+	max-height: 4em;
+	width: 100%;
+	max-width: 100%;
+	text-align: center;
 	background: #ffffff;
 	box-shadow: 0 1px 0 0 rgba(0, 0, 0, .05), 0 2px 4px 0 rgba(0, 0, 0, .06);
-	text-align: center;
-	height: 4em;
-	width: 100%;
 }
 .app-header span {
-	color: #555555;
-	height: 100%;
-	width: 100%;
 	display: flex;
-	margin: 0;
 	justify-content: center;
 	align-items: center;
+	width: 100%;
+	height: 100%;
+	margin: 0;
 	font-size: 1.25em;
 	font-weight: 200;
+	color: #555555;
 }
 .app-content {
-	width: 100%;
 	display: flex;
+	width: 100%;
+	max-width: 100%;
 }
 .app-content__box {
-	margin-top: 2em;
-	padding: 0.75em 0;
-	background: #ffffff;
-	border: 0.10em solid #f2f2f2;
-	border-radius: 2px;
-	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	width: 100%;
+	margin-top: 2em;
+	padding: 0.75em 0;
+	border: 1px solid #f2f2f2;
+	border-radius: 2px;
+	background: #ffffff;
 }
 .app-content__main {
 	width: 100%;
 	display:block;
 }
 .app-content__main-input {
-	font-size: 4em;
-	outline: none;
-	border-radius: 2px;
-	margin: 5%;
-	padding: 1%;
-	text-align: center;
-	border: 0.03em solid #f2f2f2;
-	transition: border 0.3s ease-in-out;
 	display: block;
 	width: 100%;
+	min-width: 1px;
+	min-height: 4rem;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	font-size: 4em;
+	text-align: center;
+	border: 1px solid #f2f2f2;
+	outline: none;
+	transition: border 0.3s ease-in-out;
 	-webkit-appearance: none;
 }
 .app-content__main-input:hover {
@@ -118,23 +124,23 @@ input {
 	border-color: rgba(77, 198, 103, 0.6);
 }
 .app-output {
-	width: 100%;
 	display: flex;
+	width: 100%;
 }
 .app-output__field {
 	display: block;
 	width: 100%;
 	margin: 5%;
 	padding: 1%;
-	color: #ffffff;
-	outline: none;
+	border: 1px solid #e6e6e6;
 	border-radius: 2px;
-	-webkit-appearance: none;
+	outline: none;
 	text-align: center;
-	border: 0.1em solid #e6e6e6;
+	color: #ffffff;
 	opacity: 1;
 	transition: opacity 0.3s ease-in-out;
 	transition: border 0.3s ease-in-out;
+	-webkit-appearance: none;
 }
 .app-output__field--is-inactive {
 	color: #999999;
@@ -147,13 +153,13 @@ input {
 	opacity: 0;
 }
 .app-footer {
-	height: 4em;
-	width: 100%;
 	display: flex;
+	width: 100%;
+	height: 4em;
 }
 .app-footer__notice {
-	color: #999999;
 	margin: 0.8em;
 	padding: 0.4em;
 	font-size: 0.8em;
+	color: #999999;
 }
