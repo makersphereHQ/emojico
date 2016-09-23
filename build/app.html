@@ -1,46 +1,54 @@
 <!DOCTYPE html>
+<html>
 <head>
-<meta charset="UTF-8">
-<title>Emoji Passcodes</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600">
-<style>
+    <meta charset="UTF-8">
+    <title>Emoji Passcodes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600">
+    <style>
 {{CSS}}
-</style>
+    </style>
 </head>
 <body>
-<header class="app-header app-item--is-center">
-<div class="app-tray"><span>Emoji Passcodes &#128064;</span></div>
-</header>
-<section class="app-content app-item--is-center">
-<div class="app-tray"><div class="app-content__box">
-<span class="app-font app-font--emoji">&#128075;</span>
-<span class="app-font app-font--bold">Hello friend!</span>
-<span class="app-font">Get a new fancy &amp; easy to remember passcode.</span></div>
-<div class="app-content__main">
-<form class="app-item--is-full-center" onsubmit="generate(this);event.preventDefault();">
-<input id="app-input--a" class="app-content__main-input" onfocus="log(this);" oninput="change(this);" type="text" placeholder="&#128169;">
-<input id="app-input--b" class="app-content__main-input" onfocus="log(this);" oninput="change(this);" type="text" placeholder="&#128169;">
-<input id="app-input--c" class="app-content__main-input" onfocus="log(this);" oninput="change(this);" type="text" placeholder="&#128169;">
-<input id="app-input--d" class="app-content__main-input" onfocus="log(this);" oninput="change(this);" type="text" placeholder="&#128169;">
-<input style="position:absolute;left:-50000px;opacity:0;" type="submit" value="Submit">
-</form></div></div>
-</section>
-<section class="app-output app-item--is-center">
-<div class="app-tray app-item--is-full-center">
-<input id="app-output" class="app-output__field app-output__field-is--hidden app-output__field--is-inactive" onblur="done(this);" onfocus="show(this);" type="text" value="&#128374; Double click &amp; copy me!" readonly>
-<input id="app-output__storage" class="app-output__field" type="hidden" value="">
-</div>
-</section>
-<footer class="app-footer app-item--is-center">
-<div class="app-tray app-item--is-horizontal-center app-item--has-border">
-<div style="justify-self:flex-start;width:100%;text-align:center;">
-<span class="app-footer__notice">Made with <span style="font-family:sans-serif;color:rgba(218, 85, 47, 0.6);">&#9829;</span> in Zurich.</span></div><div style="justify-self:flex-end;width:100%;text-align:right;"><span class="app-footer__notice">A Makersphere Labs <sup style="color:#777777;">Thing</sup></span>
-</div></div>
-</footer>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/2.2.0/sha.js" type="text/javascript"></script>
-<script>
+    <header class="app-header app-item--is-center">
+        <div class="app-tray"><span>Emoji Passcodes &#128064;</span></div>
+    </header>
+    <section class="app-content app-item--is-center">
+        <div class="app-tray"><div class="app-content__box">
+            <span class="app-font app-font--emoji">&#128075;</span>
+            <span class="app-font app-font--bold">Hello friend!</span>
+            <span class="app-font">Get a new fancy &amp; easy to remember passcode.</span></div>
+            <div class="app-content__main">
+                <form class="app-item--is-full-center" onsubmit="generate(this);event.preventDefault();">
+                    <input id="app-input--a" class="app-content__main-input" onfocus="log(this);" oninput="change(this);" type="text" placeholder="&#128169;">
+                    <input id="app-input--b" class="app-content__main-input" onfocus="log(this);" oninput="change(this);" type="text" placeholder="&#128169;">
+                    <input id="app-input--c" class="app-content__main-input" onfocus="log(this);" oninput="change(this);" type="text" placeholder="&#128169;">
+                    <input id="app-input--d" class="app-content__main-input" onfocus="log(this);" oninput="change(this);" type="text" placeholder="&#128169;">
+                    <input id="app-input--e" class="app-content__main-input" onfocus="log(this);" oninput="change(this);" type="text" placeholder="&#128169;">
+                    <input id="app-input--f" class="app-content__main-input" onfocus="log(this);" oninput="change(this);" type="text" placeholder="&#128169;">
+                    <input id="app-input--g" class="app-content__main-input" onfocus="log(this);" oninput="change(this);" type="text" placeholder="&#128169;">
+                    <input style="position:absolute;left:-50000px;opacity:0;" type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="app-output app-item--is-center">
+        <div class="app-tray app-item--is-full-center">
+            <input id="app-output" class="app-output__field app-output__field-is--hidden app-output__field--is-inactive" onblur="done(this);" onfocus="show(this);" type="text" value="&#128374; Double click &amp; copy me!" readonly>
+            <input id="app-output__storage" class="app-output__field" type="hidden" value="">
+        </div>
+    </section>
+    <footer class="app-footer app-item--is-center">
+        <div class="app-tray app-item--is-horizontal-center app-item--has-border">
+            <div style="justify-self:flex-start;width:100%;text-align:center;">
+                <span class="app-footer__notice">Made with <span style="font-family:sans-serif;color:rgba(218, 85, 47, 0.6);">&#9829;</span> in Zurich.</span></div><div style="justify-self:flex-end;width:100%;text-align:right;"><span class="app-footer__notice">A Makersphere Labs <sup style="color:#777777;">Thing</sup></span>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-scrypt/1.2.0/scrypt.min.js" type="text/javascript"></script>
+    <script>
+var debug = {{JS_DEBUG}};
 {{JS}}
-</script>
+    </script>
 </body>
 </html>
