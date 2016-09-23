@@ -8,6 +8,9 @@ body {
 	color: #999999;
 	background: #f9f9f9;
 }
+input {
+	min-width: 1px;
+}
 .app-tray {
 	width: 90%;
 	height: 100%;
