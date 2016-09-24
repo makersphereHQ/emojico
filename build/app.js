@@ -56,7 +56,7 @@ function generate(e) {
             var L = 40;
             var salt = 'salt';
             if (window.debug === true) { console.log(string); }
-            code = encode(scrypt.crypto_scrypt(string, salt, N, r, p, L));
+            code = encode(scrypt.crypto_scrypt(scrypt.encode_utf8(string), scrypt.encode_utf8(salt), N, r, p, L));
         });
         if (window.debug === true) { console.log(code); }
         window.storage.value = code;
