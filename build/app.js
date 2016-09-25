@@ -50,7 +50,7 @@ function generate(e) {
                      window.inputE.value + window.inputF.value +
                      window.inputG.value;
         scrypt_module_factory(function (scrypt) {
-            var N = Math.pow(2, 20);
+            var N = Math.pow(2, 14);
             var r = 8;
             var p = 1;
             var L = 16;
