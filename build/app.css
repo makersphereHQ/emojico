@@ -148,12 +148,10 @@ input {
 	color: #999999;
 }
 .app-output__field::selection {
-	/*color: rgba(77, 198, 103, 1);*/
 	color: rgba(255, 255, 255, 0);
 	background: rgba(77, 198, 103, 1);
 }
 .app-output__field::-moz-selection {
-	/*color: rgba(77, 198, 103, 1);*/
 	color: rgba(255, 255, 255, 0);
 	background: rgba(77, 198, 103, 1);
 }

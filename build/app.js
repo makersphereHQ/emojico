@@ -50,10 +50,10 @@ function generate(e) {
                      window.inputE.value + window.inputF.value +
                      window.inputG.value;
         scrypt_module_factory(function (scrypt) {
-            var N = Math.pow(2, 14);
+            var N = Math.pow(2, 20);
             var r = 8;
             var p = 1;
-            var L = 40;
+            var L = 16;
             var salt = 'salt';
             if (window.debug === true) { console.log(string); }
             code = encode(scrypt.crypto_scrypt(scrypt.encode_utf8(string), scrypt.encode_utf8(salt), N, r, p, L));
