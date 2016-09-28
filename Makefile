@@ -23,7 +23,7 @@ prod :
 	echo "javascript:(function()%7Bopen(%27data%3Atext%2Fhtml%3Bcharset%3Dutf8%3Bbase64%2C" > bookmarklet.js.tmp
 	cat bookmarklet.html | base64 > bookmarklet.html.tmp
 	sed -e 's/+/%2b/g' -e 's/-/%2d/g'  -e 's/=/%3D/g' bookmarklet.html.tmp >> bookmarklet.js.tmp
-	echo "%27%2C%27emoji-passcode%27%2C%27height%3D580%2Cwidth%3D770%2Cresizable%3Dno%2Cscrollbars%3Dno%2Ctitlebar%3Dno%2Clocation%3Dno%27)%7D)()" >> bookmarklet.js.tmp
+	echo "%27%2C%27emoji-passcode%27%2C%27height%3D600%2Cwidth%3D900%2Cresizable%3Dno%2Cscrollbars%3Dno%2Ctitlebar%3Dno%2Clocation%3Dno%27)%7D)()" >> bookmarklet.js.tmp
 	tr -d '\n' < bookmarklet.js.tmp > bookmarklet.js
 
 minify :
