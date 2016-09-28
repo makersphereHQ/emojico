@@ -93,7 +93,7 @@ input {
 	display: block;
 	width: 100%;
 	min-width: 1px;
-	min-height: 4rem;
+	min-height: 1.5em;
 	margin-top: 2rem;
 	margin-bottom: 2rem;
 	padding-left: 1rem;
@@ -130,8 +130,10 @@ input {
 .app-output__field {
 	display: block;
 	width: 100%;
-	margin: 5%;
-	padding: 1%;
+	margin-bottom: 2rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	line-height: 1.5rem;
 	border: 1px solid #e6e6e6;
 	border-radius: 2px;
 	outline: none;
@@ -146,7 +148,11 @@ input {
 	color: #999999;
 }
 .app-output__field::selection {
-	color: rgba(77, 198, 103, 1);
+	color: rgba(255, 255, 255, 0);
+	background: rgba(77, 198, 103, 1);
+}
+.app-output__field::-moz-selection {
+	color: rgba(255, 255, 255, 0);
 	background: rgba(77, 198, 103, 1);
 }
 .app-output__field-is--hidden {
