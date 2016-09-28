@@ -2,47 +2,54 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Emoji Passcodes</title>
+    <title>Emojico</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300,400,400i,600">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="shortcut icon" href="data:image/png;base64,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">
     <style>
 {{CSS}}
     </style>
 </head>
 <body>
-    <header class="app-header app-item--is-center">
-        <div class="app-tray"><span>Emoji Passcodes &#128064;</span></div>
+    <header class="header animated fadeInDown">
+        <div class="header__content">
+            <span class="header__logo"><span class="header__icon mega-octicon octicon-ruby"></span>Emojico</span>
+        </div>
     </header>
-    <section class="app-content app-item--is-center">
-        <div class="app-tray"><div class="app-content__box">
-            <span class="app-font app-font--emoji">&#128075;</span>
-            <span class="app-font app-font--bold">Hello friend!</span>
-            <span class="app-font">Get a new fancy &amp; easy to remember passcode.</span></div>
-            <div class="app-content__main">
-                <form class="app-item--is-full-center" onsubmit="generate(this);event.preventDefault();">
-                    <input id="app-input--a" class="app-content__main-input" onfocus="log(this);" oninput="change(this);" type="text" placeholder="&#128169;" autocomplete="off" style="border-bottom-left-radius:2px;border-top-left-radius:2px;">
-                    <input id="app-input--b" class="app-content__main-input" onfocus="log(this);" oninput="change(this);" type="text" placeholder="&#128169;" autocomplete="off">
-                    <input id="app-input--c" class="app-content__main-input" onfocus="log(this);" oninput="change(this);" type="text" placeholder="&#128169;" autocomplete="off">
-                    <input id="app-input--d" class="app-content__main-input" onfocus="log(this);" oninput="change(this);" type="text" placeholder="&#128169;" autocomplete="off">
-                    <input id="app-input--e" class="app-content__main-input" onfocus="log(this);" oninput="change(this);" type="text" placeholder="&#128169;" autocomplete="off">
-                    <input id="app-input--f" class="app-content__main-input" onfocus="log(this);" oninput="change(this);" type="text" placeholder="&#128169;" autocomplete="off">
-                    <input id="app-input--g" class="app-content__main-input" onfocus="log(this);" oninput="change(this);" type="text" placeholder="&#128169;" autocomplete="off" style="border-bottom-right-radius:2px;border-top-right-radius:2px;">
+    <main class="main">
+        <section id="view__output" class="main__content main__content--is-output main__content--is-hidden animated">
+            <div class="main__container main__container--is-output">
+                <input id="output" class="main__output main__output--is-hidden main__output--is-inactive" type="text" value="&#128374; Triple click &amp; copy me!" readonly>
+                <input id="output__storage" class="main__output" type="hidden" value="">
+            </div>
+        </section>
+        <section id="view__input" class="main__content main__content--is-input main__content--is-hidden animated">
+            <div class="main__container main__container--is-input">
+                <form id="form__input" class="main__form-input">
+                    <input id="input__a" class="main__input" onfocus="log(this);" oninput="change(this);" type="text" placeholder="&#128169;" autocomplete="off">
+                    <input id="input__b" class="main__input" onfocus="log(this);" oninput="change(this);" type="text" placeholder="&#128169;" autocomplete="off">
+                    <input id="input__c" class="main__input" onfocus="log(this);" oninput="change(this);" type="text" placeholder="&#128169;" autocomplete="off">
+                    <input id="input__d" class="main__input" onfocus="log(this);" oninput="change(this);" type="text" placeholder="&#128169;" autocomplete="off">
+                    <input id="input__e" class="main__input" onfocus="log(this);" oninput="change(this);" type="text" placeholder="&#128169;" autocomplete="off">
+                    <input id="input__f" class="main__input" onfocus="log(this);" oninput="change(this);" type="text" placeholder="&#128169;" autocomplete="off">
                     <input style="position:absolute;left:-50000px;opacity:0;" type="submit" value="Submit">
                 </form>
             </div>
-        </div>
-    </section>
-    <section class="app-output app-item--is-center">
-        <div class="app-tray app-item--is-full-center">
-            <input id="app-output" class="app-output__field app-output__field-is--hidden app-output__field--is-inactive" onblur="done(this);" onfocus="show(this);" type="text" value="&#128374; Triple click &amp; copy me!" readonly>
-            <input id="app-output__storage" class="app-output__field" type="hidden" value="">
-        </div>
-    </section>
-    <footer class="app-footer app-item--is-center">
-        <div class="app-tray app-item--is-horizontal-center app-item--has-border">
-            <div style="justify-self:flex-start;width:100%;text-align:center;">
-                <span class="app-footer__notice">Made with <span style="font-family:sans-serif;color:rgba(218, 85, 47, 0.6);">&#9829;</span> in Zurich.</span></div><div style="justify-self:flex-end;width:100%;text-align:right;"><span class="app-footer__notice">A Makersphere Labs <sup style="color:#777777;">Thing</sup></span>
+        </section>
+        <section id="view__front" class="main__content main__content--is-front animated fadeIn">
+            <div class="main__container main__container--is-front">
+                <form id="form__front" class="main__form-front">
+                    <input id="input__email" class="main__email" type="text" placeholder="you@example.com" autocomplete="off">
+                </form>
             </div>
+        </section>
+    </main>
+    <footer class="footer animated fadeInUp">
+        <div class="footer__content">
+            <span class="footer__notice">A Makersphere Labs <sup style="color:rgba(255, 255, 255, 0.75);">Thing</sup></span>
+        </div>
         </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-scrypt/1.2.0/scrypt.min.js" type="text/javascript"></script>
