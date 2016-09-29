@@ -1,4 +1,8 @@
 # Emojico 👀
+[![GitHub license](https://img.shields.io/badge/license-GPL-blue.svg)](https://raw.githubusercontent.com/makersphereHQ/emoji-passcodes/master/LICENSE)
+[![GitHub release](https://img.shields.io/github/release/makersphereHQ/emoji-passcodes.svg?maxAge=2592000)](https://github.com/makersphereHQ/emoji-passcodes)
+[![Github All Releases](https://img.shields.io/github/downloads/makersphereHQ/emoji-passcodes/total.svg?maxAge=2592000)](https://github.com/makersphereHQ/emoji-passcodes/releases)
+[![Status](https://img.shields.io/badge/status-accelerator-ffd264.svg)](https://makersphere.org)
 
 Use emojis instead of weak passwords!
 Learn more about this project and how it works below.
