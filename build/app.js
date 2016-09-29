@@ -1,4 +1,3 @@
-var strength = 32;
 var checksum = 0;
 var current;
 var active = false;
@@ -26,8 +25,10 @@ function validate(i) {
         if (window.debug === true) { console.log(i.length); }
         return false;
     } else {
+        var input = stripVariationSelectors(i);
+        if (window.debug === true) { console.log(input.length); }
         var regex = RegExp('[\u231A-\uD83E\uDDC0]', 'g');
-        return regex.test(i);
+        return regex.test(input);
     }
 }
 function change(e) {
@@ -61,7 +62,7 @@ function generate() {
             var N = Math.pow(2, 14);
             var r = 8;
             var p = 1;
-            var L = 32;
+            var L = 15;
             var salt = window.salt;
             if (window.debug === true) { console.log(string); }
             code = encode(scrypt.crypto_scrypt(scrypt.encode_utf8(string), scrypt.encode_utf8(salt), N, r, p, L));
